@@ -46,3 +46,34 @@
 
 交互式界面
 
+
+
+# args
+
+-h --help
+
+-v --version
+
+--live
+
+file=
+
+date=
+
+- 20230301
+
+slot=
+
+- 2
+
+-l --list
+
+- **all**
+- [ach]ivement
+- [cnt]counter
+- [lev]el
+- [clt]collectible
+- [chl]allenge
+- [scn]scene
+- [bst]iary
+
