@@ -10,6 +10,7 @@ int main()
 	analyzer.fileReader.readSaveFile();
 	//analyzer.fileReader.viewSavedata();
 	vector<u8>& savedata = analyzer.fileReader.getSavedata();
+	//view(savedata);
 	analyzer.parser.parse(savedata);
 	
 	return 0;

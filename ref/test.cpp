@@ -1,5 +1,21 @@
-#include "./TheBindingOfIsaacRepSavefileAnalyzer/myInclude.h"
+#include "myInclude.h"
+// u8 readU8(vector<u8>::iterator it)
+// {
+// }
 
+// u16 readU16(vector<u8>::iterator it)
+// {
+// }
+
+// u32 readU32(vector<u8>::iterator it)
+// {
+//     u32 res = 0;
+//     for (int i = 0; i < 4; i++)
+//     {
+//         res += (*it++) << 8 * i;
+//     }
+//     return res;
+// }
 int main()
 {
     // u8 a = 1;
@@ -11,35 +27,31 @@ int main()
     // string s2 = "world";
     // s1 += s2;
     // cout << s1 << endl;
-	u8 readU8(vector<u8>::iterator it)
-	{
 
-	}
+    // string s ="";
+    // std::vector<u8> v = {73,83,65,65,67,78,71,83,65,86,69,48,57,82,32,32,93,150,51,254,1,0,0,0,126,2,0,0,126,2,0,0,0,1,1,1,1,1,1,1};
+    // vector<u8>::iterator iter = v.begin();
+    // for(int i = 0;i<16;i++)
+    // {
+    //     s+= *(iter+i);
+    //     cout << *(iter+i) << ',';
+    // }
 
-	u16 readU16(vector<u8>::iterator it)
-	{
-
-	}
-
-	u32 readU32(vector<u8>::iterator it)
-	{
-		u32 res = 0;
-		for (int i = 0; i < 4; i++)
-		{
-			res += (*it++) << 8 * i;
-		}
-		return res;
-	}
-    string s ="";
-    std::vector<u8> v = {73,83,65,65,67,78,71,83,65,86,69,48,57,82,32,32,93,150,51,254,1,0,0,0,126,2,0,0,126,2,0,0,0,1,1,1,1,1,1,1};
-    vector<u8>::iterator iter = v.begin();
-    for(int i = 0;i<16;i++)
+    // cout << s << '|' << endl;
+    // u32 a = 10;
+    // u32 b = 1;
+    // string c = to_string(a) + '.' + to_string(b);
+    // cout << c;
+    map<string,map<string,u32>> m;
+    map<string,u32> a;
+    a["q"] = 10;
+    m["i"] = a;
+    cout << m.empty() << endl;
+    if(m.find("s") == m.end())
     {
-        s+= *(iter+i);
-        cout << *(iter+i) << ',';
+        cout << "Invalid" << endl;
     }
 
-    cout << s << '|' << endl;
 
     return 0;
 }
