@@ -2,8 +2,6 @@
 
 #include "Parser.h"
 
-//#include <map>
-
 u8 Parser::readU8()
 {
 	u8 res = 0;
@@ -41,10 +39,8 @@ u32 Parser::getU32(int offset)
 	for (int i = 0; i < 4; i++)
 	{
 		vector<u8>::iterator temp_it = this->iter + offset + i;
-		//cout << static_cast<u16>(*(temp_it)) << ',';
 		res += *(temp_it) << 8 * i;
 	}
-	//cout << endl;
 	return res;
 }
 
@@ -54,7 +50,6 @@ ParsedObject& Parser::getParsedData()
 }
 
 void Parser::parse(vector<u8>& unparsedData) {
-	//int savedata; //JSON
 	string preleading = "";
 	u32 checksum = 0;
 	vector<bool> achis;
@@ -66,8 +61,6 @@ void Parser::parse(vector<u8>& unparsedData) {
 	vector<u32>	level;
 	map<string, vector<u32>> bestiary;
 
-	//std::vector<u8> v = { 73,83,65,65,67,78,71,83,65,86,69,48,57,82,32,32,93,150,51,254 };
-
 	this->iter = unparsedData.begin();
 
 	for (int i = 0; i < 16; i++)
@@ -76,14 +69,12 @@ void Parser::parse(vector<u8>& unparsedData) {
 		//cout << *(iter + i) << ',';
 	}
 
-
 	if (preleading != "ISAACNGSAVE09R  ") {
 		cout << "您的存档格式不受支持，只支持忏悔(Rep)的存档";
 		return;
 	}
 
 	checksum = readU32();
-
 
 	int block_count = 0;
 	while (block_count < 11) {
@@ -104,18 +95,14 @@ void Parser::parse(vector<u8>& unparsedData) {
 		}
 		case 2:
 		{
-			//iter++;
-
-			counter["momkills"] = getU32(4);
+			counter["momkills"] = getU32(0x04);
 			counter["death"] = getU32(0x28);
 			counter["beststreak"] = getU32(0x5c);
-
 			for (u32 i = 0; i < block_size; i += 4)
 			{
 				counter_data.push_back(getU32(i));
 			}
 			this->iter += block_size;
-
 			break;
 		}
 		case 4:
@@ -123,7 +110,6 @@ void Parser::parse(vector<u8>& unparsedData) {
 			for (u32 i = 0; i < extra_number; i++)
 			{
 				collectibles.push_back(readU8() > 0);
-
 			}
 			break;
 		}
@@ -191,7 +177,6 @@ void Parser::parse(vector<u8>& unparsedData) {
 				}
 			}
 			break;
-
 		}
 		default:
 			break;

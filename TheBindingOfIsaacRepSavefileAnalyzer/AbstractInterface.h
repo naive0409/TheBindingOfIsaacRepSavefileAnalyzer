@@ -7,10 +7,10 @@ class AbstractInterface
 public:
 	virtual void test()
 	{
-		cout << "ABSTRACT TESTING" << endl;
+		std::cout << "ABSTRACT TESTING" << endl;
 	}
 	virtual void overview()
 	{
-		cout << "ABSTRACT OVERVIEW" << endl;
+		std::cout << "ABSTRACT OVERVIEW" << endl;
 	}
 };

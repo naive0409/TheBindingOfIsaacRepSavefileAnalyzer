@@ -5,18 +5,17 @@
 
 #include "defaults.h"
 
-const unsigned int DEFAULT_PREVIEW_NUM = 40;
+//const unsigned int DEFAULT_PREVIEW_NUM = 40;
 
 class FileReader : public AbstractInterface
 {
 public:
-	FileReader();
+	FileReader() {};
 	void readSaveFile(const char dir[] = DEFAULT_SAVEFILE_DIR);
 	//void viewSavedata(const unsigned int previewNum = DEFAULT_PREVIEW_NUM);
-	char* generateSavefileDir();
+	//char* generateSavefileDir();
 	vector<u8>& getSavedata();
 private:
 	vector<u8> savedata;
-
 };
 

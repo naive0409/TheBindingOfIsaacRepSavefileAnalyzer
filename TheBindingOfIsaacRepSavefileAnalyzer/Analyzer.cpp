@@ -23,10 +23,3 @@ ParsedObject& BindingOfIsaacRepSavefileAnalyzer::getParsedData()
 	return this->parser.getParsedData();
 }
 
-
-
-
-//void BindingOfIsaacRepSavefileAnalyzer::test()
-//{
-//	cout << "testing" << endl;
-//}
