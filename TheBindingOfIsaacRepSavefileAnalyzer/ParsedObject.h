@@ -1,13 +1,12 @@
 #pragma once
-#include "myInclude.h"
 
-class ParsedObject
+#include "necessaryInclude.h"
+#include "AbstractInterface.h"
+
+class ParsedObject : public AbstractInterface
 {
 public:
-	ParsedObject()
-	{
-
-	}
+	ParsedObject(){}
 	string preleading = "";
 	u32 checksum = 0;
 	vector<bool> achis;
@@ -18,9 +17,6 @@ public:
 	vector<u32>	cutscene;
 	vector<u32>	level;
 	map<string, vector<u32>> bestiary;
-
-
-
 private:
 };
 

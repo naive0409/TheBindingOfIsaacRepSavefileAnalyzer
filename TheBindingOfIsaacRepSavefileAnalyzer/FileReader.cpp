@@ -24,23 +24,23 @@ void FileReader::readSaveFile(const char dir[])
 	inputFile.close(); // ¹Ø±ÕÎÄ¼ş
 }
 
-void FileReader::viewSavedata(unsigned int previewNum)
-{
-	vector<u8>::iterator it = this->savedata.begin();
-	cout << "preview savedata:" << endl;
-	if (!previewNum)
-	{
-		for (; it != this->savedata.end(); it++) {
-			cout << static_cast<u16>(*it) << ',';
-		}
-	}
-	else {
-		for (int i = 0; i != previewNum; i++,it++) {
-			cout << static_cast<u16>(*it) << ',';
-		}
-	}
-		cout << endl;
-}
+//void FileReader::viewSavedata(unsigned int previewNum)
+//{
+//	vector<u8>::iterator it = this->savedata.begin();
+//	cout << "preview savedata:" << endl;
+//	if (!previewNum)
+//	{
+//		for (; it != this->savedata.end(); it++) {
+//			cout << static_cast<u16>(*it) << ',';
+//		}
+//	}
+//	else {
+//		for (int i = 0; i != previewNum; i++,it++) {
+//			cout << static_cast<u16>(*it) << ',';
+//		}
+//	}
+//		cout << endl;
+//}
 
 char* FileReader::generateSavefileDir()
 {

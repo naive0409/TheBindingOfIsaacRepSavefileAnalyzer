@@ -1,17 +1,18 @@
 #pragma once
 
-#include "myInclude.h"
+#include "necessaryInclude.h"
 
 #include "Analyzer.h"
 
 int main()
 {
-	Analyzer analyzer;
-	analyzer.fileReader.readSaveFile();
-	//analyzer.fileReader.viewSavedata();
-	vector<u8>& savedata = analyzer.fileReader.getSavedata();
-	//view(savedata);
-	analyzer.parser.parse(savedata);
+	BindingOfIsaacRepSavefileAnalyzer ana;
+
+	ana.loadSavefile();
+	ana.parse();
+
+	ana.test();
+	
 	
 	return 0;
 }

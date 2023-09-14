@@ -1,18 +1,33 @@
 #pragma once
 
-//#include "myInclude.h"
+//#include "necessaryInclude.h"
+//#include "AbstractInterface.h"
 
 #include "FileReader.h"
 #include "Parser.h"
 
-class Analyzer
+class BindingOfIsaacRepSavefileAnalyzer : public AbstractInterface
 {
-public:
-
+private:
 	FileReader fileReader;
 	Parser parser;
 
-	Analyzer() {
+public:
+	BindingOfIsaacRepSavefileAnalyzer() {}
+
+	void loadSavefile();
+	void parse();
+
+	vector<u8>& getUnparsedData();
+	ParsedObject& getParsedData();
+
+	virtual void test()
+	{
+		vector<u8>& v = this->getUnparsedData();
+		ParsedObject& p = this->getParsedData();
+		return;
 	}
-	//void test();
+
 };
+
+

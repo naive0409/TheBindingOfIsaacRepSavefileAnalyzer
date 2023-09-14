@@ -24,7 +24,7 @@
     <ClCompile Include="Analyzer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="myInclude.h">
+    <ClCompile Include="necessaryInclude.h">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="Parser.cpp">
@@ -48,6 +48,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ParsedObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractInterface.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

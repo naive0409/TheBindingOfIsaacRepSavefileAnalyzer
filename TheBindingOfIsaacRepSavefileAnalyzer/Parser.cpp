@@ -1,6 +1,8 @@
 #pragma once
+
 #include "Parser.h"
-#include <map>
+
+//#include <map>
 
 u8 Parser::readU8()
 {
@@ -33,10 +35,7 @@ u32 Parser::readU32()
 	return res;
 }
 
-u32 Parser::getU32(
-	//vector<u8>::iterator iter, 
-	int offset
-)
+u32 Parser::getU32(int offset)
 {
 	u32 res = 0;
 	for (int i = 0; i < 4; i++)
@@ -47,6 +46,11 @@ u32 Parser::getU32(
 	}
 	//cout << endl;
 	return res;
+}
+
+ParsedObject& Parser::getParsedData()
+{
+	return this->parsedObject;
 }
 
 void Parser::parse(vector<u8>& unparsedData) {

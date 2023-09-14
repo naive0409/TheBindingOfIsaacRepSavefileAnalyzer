@@ -130,11 +130,12 @@
     <ClCompile Include="Analyzer.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="myInclude.h" />
+    <ClCompile Include="necessaryInclude.h" />
     <ClCompile Include="ParsedObject.cpp" />
     <ClCompile Include="Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractInterface.h" />
     <ClInclude Include="Analyzer.h" />
     <ClInclude Include="defaults.h" />
     <ClInclude Include="FileReader.h" />

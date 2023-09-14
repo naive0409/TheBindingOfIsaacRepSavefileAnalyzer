@@ -1,8 +1,11 @@
 #pragma once
-#include "myInclude.h"
+
+//#include "necessaryInclude.h"
+//#include "AbstractInterface.h"
+
 #include "ParsedObject.h"
 
-class Parser
+class Parser : public AbstractInterface
 {
 public:
 	Parser()
@@ -10,6 +13,7 @@ public:
 
 	}
 	void parse(vector<u8>& unparsedData);
+	ParsedObject& getParsedData();
 private:
 	ParsedObject parsedObject;
 	vector<u8>::iterator iter;
@@ -22,18 +26,19 @@ private:
 		int offset = 0
 	);
 
-	void hexPreview(int num = 40)
-	{
-		for (int i = 0; i < num; i++)
-		{
-			//cout << static_cast<u16>(*(iter + i)) << ',';
-			cout
-				//<< hex
-				<< static_cast<u16>(*(iter + i))
-				<< '(' << i << ')' << ',';
-			if (!((i + 1) % 16)) cout << endl;
-		}
-		cout << endl;
 
-	}
+	//void hexPreview(int num = 40)
+	//{
+	//	for (int i = 0; i < num; i++)
+	//	{
+	//		//cout << static_cast<u16>(*(iter + i)) << ',';
+	//		cout
+	//			//<< hex
+	//			<< static_cast<u16>(*(iter + i))
+	//			<< '(' << i << ')' << ',';
+	//		if (!((i + 1) % 16)) cout << endl;
+	//	}
+	//	cout << endl;
+
+	//}
 };
