@@ -3,12 +3,7 @@
 #include "Parser.h"
 
 
-void Analyzer::test()
-{
-	cout << "testing" << endl;
-}
-
-//Analyzer::Analyzer(FileReader* fileReader)
+//void Analyzer::test()
 //{
-//	this->fileReader = fileReader;
+//	cout << "testing" << endl;
 //}

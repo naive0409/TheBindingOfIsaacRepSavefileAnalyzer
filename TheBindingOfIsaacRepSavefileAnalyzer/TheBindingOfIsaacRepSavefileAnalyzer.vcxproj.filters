@@ -27,6 +27,12 @@
     <ClCompile Include="myInclude.h">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="Parser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ParsedObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileReader.h">
@@ -36,6 +42,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="defaults.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ParsedObject.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

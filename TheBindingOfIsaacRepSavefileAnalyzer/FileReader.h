@@ -1,17 +1,20 @@
 #pragma once
 
 #include "myInclude.h"
+#include "defaults.h"
 
+const unsigned int DEFAULT_PREVIEW_NUM = 40;
 
 class FileReader
 {
 public:
-	//char* savefileDir = NULL;
 	FileReader();
-	vector<u8> savedata;
 	void readSaveFile(const char dir[] = DEFAULT_SAVEFILE_DIR);
-	void viewSavedata(unsigned int previewNum = 40);
-	
+	void viewSavedata(const unsigned int previewNum = DEFAULT_PREVIEW_NUM);
+	char* generateSavefileDir();
+	vector<u8>& getSavedata();
+private:
+	vector<u8> savedata;
 
 };
 

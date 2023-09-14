@@ -10,7 +10,8 @@ void FileReader::readSaveFile(const char dir[])
 {
 	ifstream inputFile(dir, ios::binary); // 打开二进制文件
 	if (!inputFile) {
-		cout << "无法打开文件" << endl;
+		cout << "无法打开文件 " 
+			<< dir << endl;
 		return;
 	}
 
@@ -39,4 +40,16 @@ void FileReader::viewSavedata(unsigned int previewNum)
 		}
 	}
 		cout << endl;
+}
+
+char* FileReader::generateSavefileDir()
+{
+	return nullptr;
+}
+
+vector<u8>& FileReader::getSavedata()
+{
+	//if(this->savedata != NULL)
+		return (this->savedata);
+	throw "savedata not found";
 }

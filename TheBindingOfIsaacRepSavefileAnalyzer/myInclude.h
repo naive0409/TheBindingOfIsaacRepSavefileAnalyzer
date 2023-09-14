@@ -13,5 +13,3 @@ using namespace std;
 #define u16 unsigned short
 #define u32 unsigned int
 
-
-const char DEFAULT_SAVEFILE_DIR[] = "C:\\Users\\Administrator\\Documents\\My Games\\Binding of Isaac Repentance\\20230912.rep_persistentgamedata1.dat";

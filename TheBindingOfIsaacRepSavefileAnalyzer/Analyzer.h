@@ -8,10 +8,11 @@
 class Analyzer
 {
 public:
-	
+
 	FileReader fileReader;
 	Parser parser;
+
 	Analyzer() {
 	}
-	void test();
+	//void test();
 };

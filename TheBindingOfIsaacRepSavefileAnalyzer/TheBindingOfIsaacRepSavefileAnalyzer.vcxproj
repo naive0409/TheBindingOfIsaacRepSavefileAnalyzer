@@ -131,10 +131,14 @@
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myInclude.h" />
+    <ClCompile Include="ParsedObject.cpp" />
+    <ClCompile Include="Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Analyzer.h" />
+    <ClInclude Include="defaults.h" />
     <ClInclude Include="FileReader.h" />
+    <ClInclude Include="ParsedObject.h" />
     <ClInclude Include="Parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
