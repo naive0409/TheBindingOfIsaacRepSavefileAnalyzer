@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Analyzer.h"
 //#include "Parser.h"
@@ -9,9 +9,10 @@ void BindingOfIsaacRepSavefileAnalyzer::loadSavefile() {
 
 void BindingOfIsaacRepSavefileAnalyzer::parse()
 {
-	vector<u8>& savedata = this->fileReader.getSavedata();
-	this->parser.parse(savedata);
+	this->parser.parse(this->fileReader.getSavedata());
 }
+
+
 
 vector<u8>& BindingOfIsaacRepSavefileAnalyzer::getUnparsedData()
 {

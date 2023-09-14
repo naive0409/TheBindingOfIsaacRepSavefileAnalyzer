@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 //#include "necessaryInclude.h"
 //#include "AbstractInterface.h"
@@ -9,7 +9,7 @@ class Parser : public AbstractInterface
 {
 public:
 	Parser(){}
-	void parse(vector<u8>& unparsedData);
+	ParsedObject& parse(vector<u8>& unparsedData);
 	ParsedObject& getParsedData();
 private:
 	ParsedObject parsedObject;

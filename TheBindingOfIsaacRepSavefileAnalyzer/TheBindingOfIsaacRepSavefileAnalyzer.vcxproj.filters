@@ -30,9 +30,6 @@
     <ClCompile Include="Parser.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ParsedObject.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileReader.h">
@@ -51,6 +48,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AbstractInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Statistic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameConsts.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

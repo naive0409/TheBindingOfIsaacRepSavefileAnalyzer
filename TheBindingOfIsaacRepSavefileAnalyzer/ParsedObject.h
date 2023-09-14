@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "necessaryInclude.h"
 #include "AbstractInterface.h"

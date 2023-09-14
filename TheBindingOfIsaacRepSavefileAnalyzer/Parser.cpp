@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Parser.h"
 
@@ -49,7 +49,7 @@ ParsedObject& Parser::getParsedData()
 	return this->parsedObject;
 }
 
-void Parser::parse(vector<u8>& unparsedData) {
+ParsedObject& Parser::parse(vector<u8>& unparsedData) {
 	string preleading = "";
 	u32 checksum = 0;
 	vector<bool> achis;
@@ -70,8 +70,8 @@ void Parser::parse(vector<u8>& unparsedData) {
 	}
 
 	if (preleading != "ISAACNGSAVE09R  ") {
-		cout << "ÄúµÄ´æµµ¸ñÊ½²»ÊÜÖ§³Ö£¬Ö»Ö§³Öâã»Ú(Rep)µÄ´æµµ";
-		return;
+		cout << "æ‚¨çš„å­˜æ¡£æ ¼å¼ä¸å—æ”¯æŒï¼Œåªæ”¯æŒå¿æ‚”(Rep)çš„å­˜æ¡£";
+		return this->parsedObject;
 	}
 
 	checksum = readU32();
@@ -194,6 +194,8 @@ void Parser::parse(vector<u8>& unparsedData) {
 	this->parsedObject.cutscene = cutscene;
 	this->parsedObject.level = level;
 	this->parsedObject.bestiary = bestiary;
+
+	return this->parsedObject;
 
 }
 

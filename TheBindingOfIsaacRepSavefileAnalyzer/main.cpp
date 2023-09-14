@@ -1,8 +1,9 @@
-#pragma once
+﻿#pragma once
 
 #include "necessaryInclude.h"
 
 #include "Analyzer.h"
+
 
 int main(int argc, char** argv)
 {
@@ -10,6 +11,8 @@ int main(int argc, char** argv)
 
 	ana.loadSavefile();
 	ana.parse();
+
+	//ana.count();
 
 	ana.test();
 	

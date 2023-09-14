@@ -131,7 +131,6 @@
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="necessaryInclude.h" />
-    <ClCompile Include="ParsedObject.cpp" />
     <ClCompile Include="Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,8 +138,10 @@
     <ClInclude Include="Analyzer.h" />
     <ClInclude Include="defaults.h" />
     <ClInclude Include="FileReader.h" />
+    <ClInclude Include="GameConsts.h" />
     <ClInclude Include="ParsedObject.h" />
     <ClInclude Include="Parser.h" />
+    <ClInclude Include="Statistic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,3 +1,5 @@
+TheBindingOfIsaacRepSavefileAnalyzer/defaults.h
+
 # Prerequisites
 *.d
 
@@ -33,4 +35,4 @@
 
 .vs
 x64
-defaults.h
+

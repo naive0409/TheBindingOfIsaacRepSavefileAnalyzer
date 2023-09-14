@@ -1,23 +1,23 @@
-#pragma once
+ï»¿#pragma once
 
 #include "FileReader.h"
 
 void FileReader::readSaveFile(const char dir[])
 {
-	ifstream inputFile(dir, ios::binary); // ´ò¿ª¶ş½øÖÆÎÄ¼ş
+	ifstream inputFile(dir, ios::binary); // æ‰“å¼€äºŒè¿›åˆ¶æ–‡ä»¶
 	if (!inputFile) {
-		cout << "ÎŞ·¨´ò¿ªÎÄ¼ş " 
+		cout << "æ— æ³•æ‰“å¼€æ–‡ä»¶ " 
 			<< dir << endl;
 		return;
 	}
 
-	// ¶ÁÈ¡ÎÄ¼şÄÚÈİ²¢´æ´¢ÔÚvector<u8>ÖĞ
+	// è¯»å–æ–‡ä»¶å†…å®¹å¹¶å­˜å‚¨åœ¨vector<u8>ä¸­
 	char byte;
 	while (inputFile.read(&byte, sizeof(u8))) {
 		this->savedata.push_back(static_cast<u8>(byte));
 	}
 
-	inputFile.close(); // ¹Ø±ÕÎÄ¼ş
+	inputFile.close(); // å…³é—­æ–‡ä»¶
 }
 
 vector<u8>& FileReader::getSavedata()
