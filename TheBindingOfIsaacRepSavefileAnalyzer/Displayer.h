@@ -40,7 +40,7 @@ public:
 	Displayer()
 	{
 		this->ACHIVEMENTS = new map<u32, vector<string>>({
-{0,{"name","notice","解锁条件","reward"}},
+{0,{"name","notice","condition","reward"}},
 {1,{"抹大拉","你解锁了“抹大拉”","在一局游戏中，同时拥有七个心之容器。","抹大拉"}},
 {2,{"该隐","你解锁了“该隐”","在一局游戏中，同时拥有55枚硬币。","该隐"}},
 {3,{"犹大","你解锁了“犹大”","击败撒但1次。","犹大"}},
@@ -292,7 +292,7 @@ public:
 			});
 
 		this->ITEMS = new map<u32, vector<string>>({
-{0,{"名称","name","类型","品质","充能","折叠效果"}},
+{0,{"nameCH","nameEN","type","quality","charge","effect"}},
 {1,{"悲伤洋葱","The Sad Onion","道具","3","/","射速上升。"}},
 {2,{"内眼","The Inner Eye","道具","2","/","角色每次发射3颗泪弹。"}},
 {3,{"弯勺魔术","Spoon Bender","道具","3","/","角色的泪弹获得追踪效果。"}},
@@ -559,7 +559,7 @@ public:
 	Displayer()
 	{
 		this->ACHIVEMENTS = new map<u32,vector<string>>({
-{0,{"name","notice","解锁条件","reward"}},
+{0,{"name","notice","condition","reward"}},
 {1,{"抹大拉","你解锁了“抹大拉”","在一局游戏中，同时拥有七个心之容器。","抹大拉"}},
 {2,{"该隐","你解锁了“该隐”","在一局游戏中，同时拥有55枚硬币。","该隐"}},
 {3,{"犹大","你解锁了“犹大”","击败撒但1次。","犹大"}},
@@ -1249,7 +1249,7 @@ public:
 			});
 
 		this->ITEMS = new map<u32,vector<string>>({
-{0,{"名称","name","类型","品质","充能","折叠效果"}},
+{0,{"nameCH","nameEN","type","quality","charge","effect"}},
 {1,{"悲伤洋葱","The Sad Onion","道具","3","/","射速上升。"}},
 {2,{"内眼","The Inner Eye","道具","2","/","角色每次发射3颗泪弹。"}},
 {3,{"弯勺魔术","Spoon Bender","道具","3","/","角色的泪弹获得追踪效果。"}},
