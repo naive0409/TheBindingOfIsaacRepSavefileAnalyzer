@@ -12,7 +12,7 @@ int main(int argc, char** argv)
 	ana.loadSavefile();
 	ana.parse();
 
-	//ana.count();
+	ana.count();
 
 	ana.test();
 	

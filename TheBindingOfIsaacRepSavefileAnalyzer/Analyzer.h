@@ -6,6 +6,7 @@
 #include "FileReader.h"
 #include "Parser.h"
 #include "Statistic.h"
+#include "Displayer.h"
 
 class BindingOfIsaacRepSavefileAnalyzer : public AbstractInterface
 {
@@ -13,20 +14,15 @@ private:
 	FileReader fileReader;
 	Parser parser;
 	Statistic statistic;
+	Displayer displayer;
 
 public:
 	BindingOfIsaacRepSavefileAnalyzer() {}
 
 	void loadSavefile();
 	void parse();
-	void count()
-	{
-		//统计未完成的项目
-		ParsedObject& p = this->getParsedData();
-		this->statistic.countChallengesTodo(p);
-		this->statistic.countAchievementsTodo(p);
-		this->statistic.countItemsTodo(p);
-	}
+	void count();
+
 
 	vector<u8>& getUnparsedData();
 	ParsedObject& getParsedData();

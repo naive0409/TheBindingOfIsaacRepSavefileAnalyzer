@@ -9,10 +9,14 @@ void BindingOfIsaacRepSavefileAnalyzer::loadSavefile() {
 
 void BindingOfIsaacRepSavefileAnalyzer::parse()
 {
-	this->parser.parse(this->fileReader.getSavedata());
+	this->parser.parse(this->getUnparsedData());
 }
 
+void BindingOfIsaacRepSavefileAnalyzer::count()
+{
+	this->statistic.count(this->getParsedData());
 
+}
 
 vector<u8>& BindingOfIsaacRepSavefileAnalyzer::getUnparsedData()
 {
