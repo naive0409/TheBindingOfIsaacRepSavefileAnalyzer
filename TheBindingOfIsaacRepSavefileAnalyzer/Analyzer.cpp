@@ -3,7 +3,8 @@
 #include "Analyzer.h"
 //#include "Parser.h"
 
-void BindingOfIsaacRepSavefileAnalyzer::loadSavefile() {
+void BindingOfIsaacRepSavefileAnalyzer::loadSavefile()
+{
 	this->fileReader.readSaveFile();
 }
 
@@ -14,7 +15,7 @@ void BindingOfIsaacRepSavefileAnalyzer::parse()
 
 void BindingOfIsaacRepSavefileAnalyzer::count()
 {
-	this->statistic.count(this->getParsedData());
+	this->statistic.countStats(this->getParsedData());
 
 }
 
